@@ -1,0 +1,69 @@
+body{
+   
+    @include media(lg){
+        background-image:url('../img/same_bg.png');
+        .prod_champion{
+            > .container{
+                @at-root .champion_titleshow{
+                    background-image: url('../img/title.png');
+                    background-repeat: no-repeat;
+                    height:270px;
+                    background-position: center;
+                    position:relative;
+                    // border:solid 1px #000;
+                    @include flex-cen-cen;
+                    .champion_title{
+                        padding-top:60px;
+                        color:map-get( $color, sec_bg_color);
+                    }
+                }
+                @at-root .champion_imgset{
+                    position:relative;
+                    > img{
+                        margin:auto;
+                    }
+                    > figure{
+                        @include pos_cen-cen;
+                        figcaption{
+                            // border:solid 1px #000;
+                            font-size:30px;
+                            text-align:center;
+                            padding:20px 0;
+                            color:#640000;
+                        }
+                        img{
+                            margin:auto;
+                            width:65%;
+                        }   
+                    }
+
+                }
+            }
+        }
+        .prod_normal{
+            padding-top:50px;
+            >.container{
+                @at-root .normal_titleshow{
+                    background-image: url('../img/title.png');
+                    background-repeat: no-repeat;
+                    height:270px;
+                    background-position: center;
+                    position:relative;
+                    // border:solid 1px #000;
+                    @include flex-cen-cen;
+                    .normal_title{
+                        padding-top:60px;
+                        color:map-get( $color, sec_bg_color);
+                    }
+                }
+            }
+        }
+            
+    }
+    @include media(md){
+
+    }
+}
+   
+
+
