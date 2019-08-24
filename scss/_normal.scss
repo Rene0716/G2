@@ -1,0 +1,292 @@
+.prod_normal{
+    @include media(lg){
+        padding-top:50px;
+
+        >.container{
+            @at-root .normal_titleshow{
+                background-image: url('../img/title.png');
+                background-repeat: no-repeat;
+                height:270px;
+                margin-bottom:25px;
+                background-position: center;
+                position:relative;
+                // border:solid 1px #000;
+                @include flex-cen-cen;
+                .normal_title{
+                    padding-top:60px;
+                    color:map-get( $color, sec_bg_color);
+                }
+            }
+            > .normal_wrap{
+                background-image: url('../img/oven_bg_png.png');
+                background-repeat: no-repeat;
+                background-size:100%;
+                margin:auto;
+                display:flex;
+                justify-content: space-around;
+                border:solid 1px black;
+                @at-root .prod_filter{
+                    background-image: url('../img/filter_bg.png');
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    background-position:center 70px;
+                    width:220px;
+                    // border:solid 1px blue;
+                    padding-top:120px;
+                    > .filter_popular{
+                        // border:solid 1px red;
+                        margin:20px auto 55px auto;
+                        text-align:center;
+                        > #popular_item{
+                            appearance:none;
+                            width:110px;
+                            color:#fff;
+                            font-weight:700;
+                            background-color:map-get($color,main_bg_color);
+                            background-image: url('../img/arrow.png');
+                            background-repeat: no-repeat;
+                            background-position: 83px center;
+                            border-radius:5px;
+                            padding:5px 20px 5px 10px;
+                            box-sizing: border-box;
+                            
+                        }
+                    }
+                    > .filter_scope{
+                        text-align:center;
+                        padding:5px 0;
+                        label{
+                            display:block;
+                            text-align:left;
+                            margin:5px auto 5px 25px;
+                        }
+                    }
+                    @at-root .filter_flavor{
+                        padding-top:10px;
+                        margin:5px 20px;
+                        > .flavor_title{
+                            text-align:left;
+                            margin-bottom:10px;
+                            font-weight:700;
+                            color:map-get($color,footer_bg_color);
+                        }
+                        > .boxes{
+                            display:flex;
+                            justify-content: center;
+                            input{
+                                align-self:flex-end;
+                            }
+                        }
+                    }
+                    @at-root .filter_base{
+                        padding-top:10px;
+                        margin:5px 20px;
+                        > .base_title{
+                            text-align:left;
+                            margin-bottom:10px;
+                            font-weight:700;
+                            color:map-get($color,footer_bg_color);
+                        }
+                        > .boxes{
+                            display:flex;
+                            justify-content: space-evenly;
+                            input{
+                                align-self:flex-end;
+                            }
+                        }
+                    }
+                    @at-root .filter_ingredient{
+                        padding-top:10px;
+                        margin:5px 20px;
+                        > .ingredient_title{
+                            text-align:left;
+                            margin-bottom:10px;
+                            font-weight:700;
+                            color:map-get($color,footer_bg_color);
+                        }
+                        > .boxes{
+                            display:flex;
+                            justify-content:space-evenly;
+                            flex-wrap:wrap;
+                            input{
+                                align-self:flex-end;
+                            }
+                        }
+                    }
+                    @at-root .filter_deco{
+                        padding-top:10px;
+                        margin:5px 20px;
+                        > .deco_title{
+                            text-align:left;
+                            margin-bottom:10px;
+                            font-weight:700;
+                            color:map-get($color,footer_bg_color);
+                        }
+                        > .boxes{
+                            display:flex;
+                            // justify-content:space-around;
+                            flex-wrap:wrap;
+                            input{
+                                width:33.33333%;
+                            }
+                        }
+                    }
+                    
+
+                }
+                @at-root .prod_prodset{
+                    padding-top:120px;
+                    border:solid 1px red;
+                    width:75%;
+                    
+                    > .groupshop{
+                        background-color: #f1bf8a;
+                        border-radius:10px;
+                        padding-top:10px;
+                        .titleshow{
+                            text-align:center;
+                            // border:solid 1px blue;
+                            padding-top:10px;
+                            margin-top:10px;
+                            height:50px;
+                            background-image: url('../img/oven_handle_bg.png');
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            > .groupshop_title{
+
+                            }
+                        }
+                        .slider{
+                            padding:10px 0;
+                            position: relative;
+                            .slider_prev{
+                               position:absolute;
+                               top:35%;
+                               left:0px;
+                               width:40px;
+                               height:40px;
+                               font-size:40px;
+                               color:#fff;
+                               font-weight:800;
+                               background-color:#ddd;
+
+
+                            }
+                            .slider_next{
+                                position:absolute;
+                                top:35%;
+                                right:0px;
+                                width:40px;
+                                height:40px;
+                                font-size:40px;
+                                color:#fff;
+                                font-weight:800;
+                                background-color:#ddd;
+                            }  
+                            @at-root .slider_cardset{
+                                // border:solid 1px red;
+                                display:flex;
+                                justify-content: space-evenly;
+                                margin:20px 0;
+                                .slider_card{
+                                    border:solid 1px blue;
+                                    background-image: url('../img/card_bg.png');
+                                    background-size:contain;
+                                    background-repeat: no-repeat;
+                                    background-position: center center;
+                                    padding:10px 0px;
+                                    width:25%;
+
+                                    .titleset{ 
+                                        display:flex;
+                                        justify-content: space-around;
+                                        // border:solid 1px blue;
+                                        padding:5px 0;
+                                        
+                                        @at-root .cardtitle{
+                                            font-size:24px;
+                                            font-weight:bold;
+                                            // border:solid 1px red;
+                                            flex-grow:0.4;
+                                            text-align:right;
+                                            align-self: center;
+                                            position:relative;
+                                            z-index:1;
+                                            padding:-5px 0;
+                                            &::after{
+                                                content:"";
+                                                position:absolute;
+                                                left:5px;
+                                                top:-10px;
+                                                background-image: url('../img/brush.png');
+                                                background-repeat: no-repeat;
+                                               width:145px;
+                                               height:50px;
+                                                z-index:-1;
+                                                
+                                            }
+
+                                           
+                                        }
+
+                                    }
+                                    >img{
+                                        margin:10px auto;
+                                    }
+                                    .card_price{
+                                        // border:solid 1px blue;
+                                        text-align:center;
+                                        margin:auto;
+                                        font-weight:800;
+                                        font-size:18px;
+                                        padding:5px 0;
+                                    }
+                                    .card_btn{
+                                        padding:10px 0px;
+                                        margin:5px;
+                                        .group{
+                                            background-color: #0168b7;
+                                            padding:10px;
+                                            color:#fff;
+                                            font-weight:800;
+                                            border-radius:10px;
+                                            margin:0 5px;
+                                        }
+                                        .cart{
+                                            background-color: #0168b7;
+                                            padding:10px;
+                                            color:#fff;
+                                            font-weight:800;
+                                            border-radius:10px;
+                                            // margin:0 5px;
+                                        }
+
+                                    }
+                                }
+
+                            }
+                            @at-root .slider_circleset{
+                                width:100px;
+                                margin:auto;
+                                display:flex;
+                                justify-content: space-evenly;
+                                > .circle1, > .circle2, > .circle3{
+                                    width:15px;
+                                    height:15px;
+                                    background-color: #fff;
+                                    border-radius:50%;
+                                }
+                            }
+                        }   
+                    
+
+                    }
+                }
+            }
+        }
+    }
+    @include media(md){
+
+    }
+    
+} 
