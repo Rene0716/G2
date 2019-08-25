@@ -254,7 +254,7 @@ table {
   .prod_normal > .container > .normal_wrap {
     background-image: url("../img/oven_bg_png.png");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 106%;
     margin: auto;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -263,11 +263,12 @@ table {
         flex-wrap: wrap;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    padding-bottom: 120px;
   }
   .prod_filter {
     background-image: url("../img/filter_bg.png");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100% 40%;
     background-position: center 70px;
     width: 220px;
     padding-top: 120px;
@@ -299,7 +300,18 @@ table {
   .prod_filter > .filter_scope label {
     display: block;
     text-align: left;
-    margin: 5px auto 5px 25px;
+    margin: 5px auto 10px 20px;
+    font-weight: 700;
+    color: #090c7b;
+    font-size: 18px;
+  }
+  .prod_filter > .filter_scope input {
+    border-radius: 3px;
+  }
+  .prod_filter > .filter_scope > .confirm input {
+    color: #fff;
+    font-weight: 700;
+    background-color: #ffc556;
   }
   .filter_flavor {
     padding-top: 10px;
@@ -324,6 +336,8 @@ table {
   .filter_flavor > .boxes input {
     -ms-flex-item-align: end;
         align-self: flex-end;
+    width: 15px;
+    height: 15px;
   }
   .filter_base {
     padding-top: 10px;
@@ -345,9 +359,11 @@ table {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
-  .filter_base > .boxes input {
+  .filter_base > .boxes > input {
     -ms-flex-item-align: end;
         align-self: flex-end;
+    width: 15px;
+    height: 15px;
   }
   .filter_ingredient {
     padding-top: 10px;
@@ -368,10 +384,14 @@ table {
             justify-content: space-evenly;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    width: 100%;
   }
-  .filter_ingredient > .boxes input {
-    -ms-flex-item-align: end;
-        align-self: flex-end;
+  .filter_ingredient > .boxes > input {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    width: 15px;
+    height: 15px;
   }
   .filter_deco {
     padding-top: 10px;
@@ -392,6 +412,7 @@ table {
   }
   .filter_deco > .boxes input {
     width: 33.33333%;
+    height: 15px;
   }
   .prod_prodset {
     padding-top: 120px;
@@ -454,10 +475,10 @@ table {
   }
   .slider_cardset .slider_card {
     background-image: url("../img/card_bg.png");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    padding: 10px 0px;
+    padding: 100px 0px;
     width: 25%;
   }
   .slider_cardset .slider_card .card_titleset {
@@ -469,7 +490,6 @@ table {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    padding: 5px 0;
   }
   .cardtitle {
     font-size: 24px;
@@ -486,7 +506,7 @@ table {
   .cardtitle::after {
     content: "";
     position: absolute;
-    left: 0px;
+    left: 7px;
     top: -10px;
     background-image: url("../img/brush.png");
     background-repeat: no-repeat;
@@ -634,7 +654,7 @@ table {
   .cardtitle::after {
     content: "";
     position: absolute;
-    left: 0px;
+    left: 7px;
     top: -10px;
     background-image: url("../img/brush.png");
     background-repeat: no-repeat;
@@ -782,7 +802,7 @@ table {
   .cardtitle::after {
     content: "";
     position: absolute;
-    left: 0px;
+    left: 7px;
     top: -10px;
     background-image: url("../img/brush.png");
     background-repeat: no-repeat;
@@ -930,7 +950,7 @@ table {
   .cardtitle::after {
     content: "";
     position: absolute;
-    left: 0px;
+    left: 7px;
     top: -10px;
     background-image: url("../img/brush.png");
     background-repeat: no-repeat;

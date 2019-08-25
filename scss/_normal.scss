@@ -20,16 +20,17 @@
             > .normal_wrap{
                 background-image: url('../img/oven_bg_png.png');
                 background-repeat: no-repeat;
-                background-size:100%;
+                background-size:106%;
                 margin:auto;
                 display:flex;
                 flex-wrap:wrap;
                 justify-content: space-around;
-                // border:solid 1px black;
+                // border:solid 1px blue;
+                padding-bottom:120px;
                 @at-root .prod_filter{
                     background-image: url('../img/filter_bg.png');
                     background-repeat: no-repeat;
-                    background-size: 100%;
+                    background-size: 100% 40%;
                     background-position:center 70px;
                     width:220px;
                     // border:solid 1px blue;
@@ -59,7 +60,21 @@
                         label{
                             display:block;
                             text-align:left;
-                            margin:5px auto 5px 25px;
+                            margin:5px auto 10px 20px;
+                            font-weight:700;
+                            color:map-get($color,footer_bg_color);
+                            font-size:18px;
+                        }
+                        input{
+                            border-radius:3px;
+                          
+
+                        }
+                        > .confirm input{
+                            
+                            color:#fff;
+                            font-weight:700;
+                            background-color:map-get($color,main_bg_color);
                         }
                     }
                     @at-root .filter_flavor{
@@ -77,6 +92,8 @@
                             justify-content: center;
                             input{
                                 align-self:flex-end;
+                                width:15px;
+                                height:15px;
                             }
                         }
                     }
@@ -93,8 +110,10 @@
                             display:flex;
                             flex-wrap:wrap;
                             justify-content: space-evenly;
-                            input{
+                            >input{
                                 align-self:flex-end;
+                                width:15px;
+                                height:15px;
                             }
                         }
                     }
@@ -111,8 +130,11 @@
                             display:flex;
                             justify-content:space-evenly;
                             flex-wrap:wrap;
-                            input{
-                                align-self:flex-end;
+                            width:100%;
+                            > input{
+                                align-self:center;
+                                width:15px;
+                                height:15px;
                             }
                         }
                     }
@@ -131,6 +153,8 @@
                             flex-wrap:wrap;
                             input{
                                 width:33.33333%;
+                                height:15px;
+
                             }
                         }
                     }
@@ -195,17 +219,17 @@
                                 .slider_card{
                                     // border:solid 1px blue;
                                     background-image: url('../img/card_bg.png');
-                                    background-size:contain;
+                                    background-size:cover;
                                     background-repeat: no-repeat;
                                     background-position: center center;
-                                    padding:10px 0px;
+                                    padding:100px 0px;
                                     width:25%;
                                     .card_titleset{ 
                                         display:flex;
                                         flex-wrap:wrap;
                                         justify-content: space-evenly;
                                         // border:solid 1px blue;
-                                        padding:5px 0;
+                                        // padding:5px 0;
                                         
                                         @at-root .cardtitle{
                                             font-size:24px;
@@ -220,7 +244,7 @@
                                             &::after{
                                                 content:"";
                                                 position:absolute;
-                                                left:0px;
+                                                left:7px;
                                                 top:-10px;
                                                 background-image: url('../img/brush.png');
                                                 background-repeat: no-repeat;
@@ -358,7 +382,7 @@
                                             &::after{
                                                 content:"";
                                                 position:absolute;
-                                                left:0px;
+                                                left:7px;
                                                 top:-10px;
                                                 background-image: url('../img/brush.png');
                                                 background-repeat: no-repeat;
@@ -496,7 +520,7 @@
                                             &::after{
                                                 content:"";
                                                 position:absolute;
-                                                left:0px;
+                                                left:7px;
                                                 top:-10px;
                                                 background-image: url('../img/brush.png');
                                                 background-repeat: no-repeat;
@@ -637,7 +661,7 @@
                                             &::after{
                                                 content:"";
                                                 position:absolute;
-                                                left:0px;
+                                                left:7px;
                                                 top:-10px;
                                                 background-image: url('../img/brush.png');
                                                 background-repeat: no-repeat;
