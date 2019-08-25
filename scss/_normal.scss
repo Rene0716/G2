@@ -23,6 +23,7 @@
                 background-size:100%;
                 margin:auto;
                 display:flex;
+                flex-wrap:wrap;
                 justify-content: space-around;
                 border:solid 1px black;
                 @at-root .prod_filter{
@@ -72,6 +73,7 @@
                         }
                         > .boxes{
                             display:flex;
+                            flex-wrap:wrap;
                             justify-content: center;
                             input{
                                 align-self:flex-end;
@@ -89,6 +91,7 @@
                         }
                         > .boxes{
                             display:flex;
+                            flex-wrap:wrap;
                             justify-content: space-evenly;
                             input{
                                 align-self:flex-end;
@@ -143,18 +146,17 @@
                         background-color: #f1bf8a;
                         border-radius:10px;
                         padding-top:10px;
+                        margin-bottom:20px;
                         .titleshow{
                             text-align:center;
                             // border:solid 1px blue;
-                            padding-top:10px;
+                            padding-top:15px;
                             margin-top:10px;
                             height:50px;
                             background-image: url('../img/oven_handle_bg.png');
                             background-repeat: no-repeat;
                             background-position: center;
-                            > .groupshop_title{
-
-                            }
+                            background-size: contain;
                         }
                         .slider{
                             padding:10px 0;
@@ -169,8 +171,8 @@
                                color:#fff;
                                font-weight:800;
                                background-color:#ddd;
-
-
+                               cursor:pointer;
+                               
                             }
                             .slider_next{
                                 position:absolute;
@@ -182,12 +184,14 @@
                                 color:#fff;
                                 font-weight:800;
                                 background-color:#ddd;
+                                cursor:pointer;
                             }  
                             @at-root .slider_cardset{
                                 // border:solid 1px red;
                                 display:flex;
                                 justify-content: space-evenly;
                                 margin:20px 0;
+                                flex-wrap:wrap;
                                 .slider_card{
                                     border:solid 1px blue;
                                     background-image: url('../img/card_bg.png');
@@ -196,10 +200,10 @@
                                     background-position: center center;
                                     padding:10px 0px;
                                     width:25%;
-
-                                    .titleset{ 
+                                    .card_titleset{ 
                                         display:flex;
-                                        justify-content: space-around;
+                                        flex-wrap:wrap;
+                                        justify-content: space-evenly;
                                         // border:solid 1px blue;
                                         padding:5px 0;
                                         
@@ -207,7 +211,7 @@
                                             font-size:24px;
                                             font-weight:bold;
                                             // border:solid 1px red;
-                                            flex-grow:0.4;
+                                            width:120px;
                                             text-align:right;
                                             align-self: center;
                                             position:relative;
@@ -216,22 +220,19 @@
                                             &::after{
                                                 content:"";
                                                 position:absolute;
-                                                left:5px;
+                                                left:0px;
                                                 top:-10px;
                                                 background-image: url('../img/brush.png');
                                                 background-repeat: no-repeat;
                                                width:145px;
                                                height:50px;
-                                                z-index:-1;
-                                                
-                                            }
-
-                                           
+                                                z-index:-1;   
+                                            }  
                                         }
-
                                     }
                                     >img{
                                         margin:10px auto;
+                                        height:140px;
                                     }
                                     .card_price{
                                         // border:solid 1px blue;
@@ -244,6 +245,7 @@
                                     .card_btn{
                                         padding:10px 0px;
                                         margin:5px;
+                                        display:flex;
                                         .group{
                                             background-color: #0168b7;
                                             padding:10px;
@@ -260,16 +262,432 @@
                                             border-radius:10px;
                                             // margin:0 5px;
                                         }
-
                                     }
                                 }
+                            }
+                            @at-root .slider_circleset{
+                                width:100px;
+                                margin:auto;
+                                display:flex;
+                                flex-wrap:wrap;
+                                justify-content: space-evenly;
+                                > .circle1, > .circle2, > .circle3{
+                                    width:15px;
+                                    height:15px;
+                                    background-color: #fff;
+                                    border-radius:50%;
+                                }
+                            }
+                        }                   
+                    }
 
+                    > .base{
+                        background-color: #f1bf8a;
+                        border-radius:10px;
+                        padding-top:10px;
+                        margin-bottom:20px;
+                        .titleshow{
+                            text-align:center;
+                            // border:solid 1px blue;
+                            padding-top:15px;
+                            margin-top:10px;
+                            height:50px;
+                            background-image: url('../img/oven_handle_bg.png');
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: contain;
+                        }
+                        .slider{
+                            padding:10px 0;
+                            position: relative;
+                            .slider_prev{
+                               position:absolute;
+                               top:35%;
+                               left:0px;
+                               width:40px;
+                               height:40px;
+                               font-size:40px;
+                               color:#fff;
+                               font-weight:800;
+                               background-color:#ddd;
+                               cursor:pointer;
+                            }
+                            .slider_next{
+                                position:absolute;
+                                top:35%;
+                                right:0px;
+                                width:40px;
+                                height:40px;
+                                font-size:40px;
+                                color:#fff;
+                                font-weight:800;
+                                background-color:#ddd;
+                                cursor:pointer;
+                            }  
+                            @at-root .slider_cardset{
+                                // border:solid 1px red;
+                                display:flex;
+                                justify-content: space-evenly;
+                                margin:20px 0;
+                                flex-wrap:wrap;
+                                .slider_card{
+                                    border:solid 1px blue;
+                                    background-image: url('../img/card_bg.png');
+                                    background-size:contain;
+                                    background-repeat: no-repeat;
+                                    background-position: center center;
+                                    padding:10px 0px;
+                                    width:25%;
+                                    .card_titleset{ 
+                                        display:flex;
+                                        justify-content: space-evenly;
+                                        // border:solid 1px blue;
+                                        padding:5px 0;
+                                        flex-wrap:wrap;
+                                        
+                                        @at-root .cardtitle{
+                                            font-size:24px;
+                                            font-weight:bold;
+                                            // border:solid 1px red;
+                                            width:120px;
+                                            text-align:right;
+                                            align-self: center;
+                                            position:relative;
+                                            z-index:1;
+                                            padding:-5px 0;
+                                            &::after{
+                                                content:"";
+                                                position:absolute;
+                                                left:0px;
+                                                top:-10px;
+                                                background-image: url('../img/brush.png');
+                                                background-repeat: no-repeat;
+                                               width:145px;
+                                               height:50px;
+                                                z-index:-1;   
+                                            }  
+                                        }
+                                    }
+                                    >img{
+                                        margin:10px auto;
+                                        height:140px;
+                                    }
+                                    .card_price{
+                                        // border:solid 1px blue;
+                                        text-align:center;
+                                        margin:auto;
+                                        font-weight:800;
+                                        font-size:18px;
+                                        padding:5px 0;
+                                    }
+                                    .card_btn{
+                                        padding:10px 0px;
+                                        margin:5px;
+                                        display:flex;
+                                        .group{
+                                            background-color: #0168b7;
+                                            padding:10px;
+                                            color:#fff;
+                                            font-weight:800;
+                                            border-radius:10px;
+                                            margin:0 5px;
+                                        }
+                                        .cart{
+                                            background-color: #0168b7;
+                                            padding:10px;
+                                            color:#fff;
+                                            font-weight:800;
+                                            border-radius:10px;
+                                            // margin:0 5px;
+                                        }
+                                    }
+                                }
+                            }
+                            @at-root .slider_circleset{
+                                width:100px;
+                                margin:auto;
+                                display:flex;
+                                flex-wrap:wrap;
+                                justify-content: space-evenly;
+                                > .circle1, > .circle2, > .circle3{
+                                    width:15px;
+                                    height:15px;
+                                    background-color: #fff;
+                                    border-radius:50%;
+                                }
+                            }
+                        }   
+                    
+
+                    }
+                    > .match{
+                        background-color: #f1bf8a;
+                        border-radius:10px;
+                        padding-top:10px;
+                        margin-bottom:20px;
+                        .titleshow{
+                            text-align:center;
+                            // border:solid 1px blue;
+                            padding-top:15px;
+                            margin-top:10px;
+                            height:50px;
+                            background-image: url('../img/oven_handle_bg.png');
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: contain;
+                        }
+                        .slider{
+                            padding:10px 0;
+                            position: relative;
+                            .slider_prev{
+                               position:absolute;
+                               top:35%;
+                               left:0px;
+                               width:40px;
+                               height:40px;
+                               font-size:40px;
+                               color:#fff;
+                               font-weight:800;
+                               background-color:#ddd;
+                               cursor:pointer;
+                            }
+                            .slider_next{
+                                position:absolute;
+                                top:35%;
+                                right:0px;
+                                width:40px;
+                                height:40px;
+                                font-size:40px;
+                                color:#fff;
+                                font-weight:800;
+                                background-color:#ddd;
+                                cursor:pointer;
+                            }  
+                            @at-root .slider_cardset{
+                                // border:solid 1px red;
+                                display:flex;
+                                justify-content: space-evenly;
+                                margin:20px 0;
+                                flex-wrap:wrap;
+                                .slider_card{
+                                    border:solid 1px blue;
+                                    background-image: url('../img/card_bg.png');
+                                    background-size:contain;
+                                    background-repeat: no-repeat;
+                                    background-position: center center;
+                                    padding:10px 0px;
+                                    width:25%;
+                                    .card_titleset{ 
+                                        display:flex;
+                                        justify-content: space-evenly;
+                                        // border:solid 1px blue;
+                                        padding:5px 0;
+                                        flex-wrap: wrap;
+                                        @at-root .cardtitle{
+                                            font-size:24px;
+                                            font-weight:bold;
+                                            // border:solid 1px red;
+                                            width:120px;
+                                            text-align:right;
+                                            align-self: center;
+                                            position:relative;
+                                            z-index:1;
+                                            padding:-5px 0;
+                                            &::after{
+                                                content:"";
+                                                position:absolute;
+                                                left:0px;
+                                                top:-10px;
+                                                background-image: url('../img/brush.png');
+                                                background-repeat: no-repeat;
+                                               width:145px;
+                                               height:50px;
+                                                z-index:-1;   
+                                            }  
+                                        }
+                                    }
+                                    >img{
+                                        margin:10px auto;
+                                        height:140px;
+                                    }
+                                    .card_price{
+                                        // border:solid 1px blue;
+                                        text-align:center;
+                                        margin:auto;
+                                        font-weight:800;
+                                        font-size:18px;
+                                        padding:5px 0;
+                                    }
+                                    .card_btn{
+                                        padding:10px 0px;
+                                        margin:5px;
+                                        display:flex;
+                                        // flex-wrap:wrap;
+                                        .group{
+                                            background-color: #0168b7;
+                                            padding:10px;
+                                            color:#fff;
+                                            font-weight:800;
+                                            border-radius:10px;
+                                            margin:0 5px;
+                                        }
+                                        .cart{
+                                            background-color: #0168b7;
+                                            padding:10px;
+                                            color:#fff;
+                                            font-weight:800;
+                                            border-radius:10px;
+                                            // margin:0 5px;
+                                        }
+                                    }
+                                }
                             }
                             @at-root .slider_circleset{
                                 width:100px;
                                 margin:auto;
                                 display:flex;
                                 justify-content: space-evenly;
+                                flex-wrap:wrap;
+                                > .circle1, > .circle2, > .circle3{
+                                    width:15px;
+                                    height:15px;
+                                    background-color: #fff;
+                                    border-radius:50%;
+                                }
+                            }
+                        }   
+                    
+
+                    }
+                    > .deco{
+                        background-color: #f1bf8a;
+                        border-radius:10px;
+                        padding-top:10px;
+                        margin-bottom:20px;
+                        .titleshow{
+                            text-align:center;
+                            // border:solid 1px blue;
+                            padding-top:15px;
+                            margin-top:10px;
+                            height:50px;
+                            background-image: url('../img/oven_handle_bg.png');
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: contain;
+
+                        }
+                        .slider{
+                            padding:10px 0;
+                            position: relative;
+                            .slider_prev{
+                               position:absolute;
+                               top:35%;
+                               left:0px;
+                               width:40px;
+                               height:40px;
+                               font-size:40px;
+                               color:#fff;
+                               font-weight:800;
+                               background-color:#ddd;
+                               cursor:pointer;
+                            }
+                            .slider_next{
+                                position:absolute;
+                                top:35%;
+                                right:0px;
+                                width:40px;
+                                height:40px;
+                                font-size:40px;
+                                color:#fff;
+                                font-weight:800;
+                                background-color:#ddd;
+                                cursor:pointer;
+                            }  
+                            @at-root .slider_cardset{
+                                // border:solid 1px red;
+                                display:flex;
+                                justify-content: space-evenly;
+                                margin:20px 0;
+                                flex-wrap:wrap;
+                                .slider_card{
+                                    border:solid 1px blue;
+                                    background-image: url('../img/card_bg.png');
+                                    background-size:contain;
+                                    background-repeat: no-repeat;
+                                    background-position: center center;
+                                    padding:10px 0px;
+                                    width:25%;
+                                    .card_titleset{ 
+                                        display:flex;
+                                        justify-content: space-evenly;
+                                        // border:solid 1px blue;
+                                        padding:5px 0;
+                                        flex-wrap:wrap;
+                                        
+                                        @at-root .cardtitle{
+                                            font-size:24px;
+                                            font-weight:bold;
+                                            // border:solid 1px red;
+                                            width:135px;
+                                            text-align:right;
+                                            align-self: center;
+                                            position:relative;
+                                            z-index:1;
+                                            padding:-5px 0 0 -15px;
+                                            &::after{
+                                                content:"";
+                                                position:absolute;
+                                                left:0px;
+                                                top:-10px;
+                                                background-image: url('../img/brush.png');
+                                                background-repeat: no-repeat;
+                                               width:145px;
+                                               height:50px;
+                                                z-index:-1;   
+                                            }  
+                                        }
+                                    }
+                                    >img{
+                                        margin:10px auto;
+                                        height:140px;
+                                    }
+                                    .card_price{
+                                        // border:solid 1px blue;
+                                        text-align:center;
+                                        margin:auto;
+                                        font-weight:800;
+                                        font-size:18px;
+                                        padding:5px 0;
+                                    }
+                                    .card_btn{
+                                        padding:10px 0px;
+                                        margin:5px;
+                                        display:flex;
+                                        .group{
+                                            background-color: #0168b7;
+                                            padding:10px;
+                                            color:#fff;
+                                            font-weight:800;
+                                            border-radius:10px;
+                                            margin:0 5px;
+                                        }
+                                        .cart{
+                                            background-color: #0168b7;
+                                            padding:10px;
+                                            color:#fff;
+                                            font-weight:800;
+                                            border-radius:10px;
+                                            // margin:0 5px;
+                                        }
+                                    }
+                                }
+                            }
+                            @at-root .slider_circleset{
+                                width:100px;
+                                margin:auto;
+                                display:flex;
+                                justify-content: space-evenly;
+                                flex-wrap:wrap;
                                 > .circle1, > .circle2, > .circle3{
                                     width:15px;
                                     height:15px;
