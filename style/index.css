@@ -293,6 +293,12 @@ table {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
+  .prod_filter > .filter_popular > #popular_item option {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    border-radius: 5px;
+  }
   .prod_filter > .filter_scope {
     text-align: center;
     padding: 5px 0;
@@ -1052,7 +1058,6 @@ a {
   position: relative;
   width: 100%;
   max-width: 1200px;
-  outline: 1px solid red;
   margin: 0 auto;
 }
 
