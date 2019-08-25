@@ -263,7 +263,6 @@ table {
         flex-wrap: wrap;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    border: solid 1px black;
   }
   .prod_filter {
     background-image: url("../img/filter_bg.png");
@@ -396,7 +395,6 @@ table {
   }
   .prod_prodset {
     padding-top: 120px;
-    border: solid 1px red;
     width: 75%;
   }
   .prod_prodset > .groupshop {
@@ -455,7 +453,6 @@ table {
         flex-wrap: wrap;
   }
   .slider_cardset .slider_card {
-    border: solid 1px blue;
     background-image: url("../img/card_bg.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -511,6 +508,9 @@ table {
   .slider_cardset .slider_card .card_btn {
     padding: 10px 0px;
     margin: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .slider_cardset .slider_card .card_btn .group {
     background-color: #0168b7;
@@ -533,6 +533,8 @@ table {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
@@ -595,9 +597,10 @@ table {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
     margin: 20px 0;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .slider_cardset .slider_card {
-    border: solid 1px blue;
     background-image: url("../img/card_bg.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -613,6 +616,8 @@ table {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
     padding: 5px 0;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .cardtitle {
     font-size: 24px;
@@ -651,6 +656,9 @@ table {
   .slider_cardset .slider_card .card_btn {
     padding: 10px 0px;
     margin: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .slider_cardset .slider_card .card_btn .group {
     background-color: #0168b7;
@@ -673,6 +681,8 @@ table {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
@@ -735,9 +745,10 @@ table {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
     margin: 20px 0;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .slider_cardset .slider_card {
-    border: solid 1px blue;
     background-image: url("../img/card_bg.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -753,6 +764,8 @@ table {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
     padding: 5px 0;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .cardtitle {
     font-size: 24px;
@@ -791,6 +804,9 @@ table {
   .slider_cardset .slider_card .card_btn {
     padding: 10px 0px;
     margin: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .slider_cardset .slider_card .card_btn .group {
     background-color: #0168b7;
@@ -816,6 +832,8 @@ table {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .slider_circleset > .circle1, .slider_circleset > .circle2, .slider_circleset > .circle3 {
     width: 15px;
@@ -875,9 +893,10 @@ table {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
     margin: 20px 0;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .slider_cardset .slider_card {
-    border: solid 1px blue;
     background-image: url("../img/card_bg.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -893,6 +912,8 @@ table {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
     padding: 5px 0;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .cardtitle {
     font-size: 24px;
@@ -931,6 +952,9 @@ table {
   .slider_cardset .slider_card .card_btn {
     padding: 10px 0px;
     margin: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .slider_cardset .slider_card .card_btn .group {
     background-color: #0168b7;
@@ -956,6 +980,8 @@ table {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .slider_circleset > .circle1, .slider_circleset > .circle2, .slider_circleset > .circle3 {
     width: 15px;
