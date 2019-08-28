@@ -104,19 +104,25 @@
                 display: block;
                 width: 100%;
             }
-            input {
-                width: 20px;
-                height: 20px;
-                border: solid 1px #000;
+            >p {
+                width: 33.33333%;
                 @include media(lg) {
-                    width: 34%;
+                    width: 100%;
+                }
+                input {
+                    width: 20px;
+                    height: 20px;
+                    border: solid 1px #000;
+                    @include media(lg) {
+                        width: 34%;
+                        align-self: center;
+                    }
+                }
+                label {
+                    width: 35%;
+                    height: 20px;
                     align-self: center;
                 }
-            }
-            label {
-                width: 25%;
-                height: 20px;
-                align-self: center;
             }
         }
     }

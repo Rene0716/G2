@@ -186,7 +186,6 @@ table {
   margin: auto;
   padding-top: 50px;
   padding-bottom: 50px;
-  border: solid 1px red;
 }
 
 .body_bg .prod_champion > .container .champion_titleshow {
@@ -497,20 +496,36 @@ table {
   }
 }
 
-.filter_group > .filter_flavor > .boxes input,
-.filter_group > .filter_base > .boxes input,
-.filter_group > .filter_ingredient > .boxes input,
-.filter_group > .filter_deco > .boxes input {
+.filter_group > .filter_flavor > .boxes > p,
+.filter_group > .filter_base > .boxes > p,
+.filter_group > .filter_ingredient > .boxes > p,
+.filter_group > .filter_deco > .boxes > p {
+  width: 33.33333%;
+}
+
+@media (min-width: 768px) {
+  .filter_group > .filter_flavor > .boxes > p,
+  .filter_group > .filter_base > .boxes > p,
+  .filter_group > .filter_ingredient > .boxes > p,
+  .filter_group > .filter_deco > .boxes > p {
+    width: 100%;
+  }
+}
+
+.filter_group > .filter_flavor > .boxes > p input,
+.filter_group > .filter_base > .boxes > p input,
+.filter_group > .filter_ingredient > .boxes > p input,
+.filter_group > .filter_deco > .boxes > p input {
   width: 20px;
   height: 20px;
   border: solid 1px #000;
 }
 
 @media (min-width: 768px) {
-  .filter_group > .filter_flavor > .boxes input,
-  .filter_group > .filter_base > .boxes input,
-  .filter_group > .filter_ingredient > .boxes input,
-  .filter_group > .filter_deco > .boxes input {
+  .filter_group > .filter_flavor > .boxes > p input,
+  .filter_group > .filter_base > .boxes > p input,
+  .filter_group > .filter_ingredient > .boxes > p input,
+  .filter_group > .filter_deco > .boxes > p input {
     width: 34%;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
@@ -518,11 +533,11 @@ table {
   }
 }
 
-.filter_group > .filter_flavor > .boxes label,
-.filter_group > .filter_base > .boxes label,
-.filter_group > .filter_ingredient > .boxes label,
-.filter_group > .filter_deco > .boxes label {
-  width: 25%;
+.filter_group > .filter_flavor > .boxes > p label,
+.filter_group > .filter_base > .boxes > p label,
+.filter_group > .filter_ingredient > .boxes > p label,
+.filter_group > .filter_deco > .boxes > p label {
+  width: 35%;
   height: 20px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -622,7 +637,7 @@ table {
 
 .card_slider {
   width: 100%;
-  height: 420px;
+  height: 380px;
   background-image: url("../img/prod/card_bg.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -683,6 +698,7 @@ table {
   width: 120px;
   text-align: center;
   z-index: 1;
+  padding-left: 40px;
 }
 
 @media (min-width: 768px) {
@@ -690,6 +706,7 @@ table {
     -webkit-box-flex: 0.3;
         -ms-flex-positive: 0.3;
             flex-grow: 0.3;
+    padding-left: 0px;
   }
 }
 

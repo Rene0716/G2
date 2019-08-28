@@ -62,7 +62,7 @@
                                         // border:solid 1px blue;
                                         &_slider {
                                             width: 100%;
-                                            height: 420px;
+                                            height: 380px;
                                             background-image: url('../img/prod/card_bg.png');
                                             background-size: contain;
                                             background-repeat: no-repeat;
@@ -103,8 +103,10 @@
                                             width: 120px;
                                             text-align: center;
                                             z-index: 1;
+                                            padding-left: 40px;
                                             @include media(lg) {
                                                 flex-grow: 0.3;
+                                                padding-left: 0px;
                                             }
                                         }
                                         &_img {
