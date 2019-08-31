@@ -7,6 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Product</title>
     <link rel="stylesheet" href="style/index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/1.0.0/anime.min.js'></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/css-doodle/0.7.2/css-doodle.min.js"></script> -->
+    
+
+
+    
 </head>
 
 <body class='body_bg'>
@@ -16,7 +23,69 @@
                 <h2 class='champion_title'>上個月團購冠軍</h2>
             </div>
             <div class="champion_imgset">
-                <img src="img/prod/groupchampion_bg.png" alt="團購冠軍">
+                <canvas id='c' width='1200' height='300'></canvas>
+                <script src="js/pop.js"></script>
+                          <!-- <style>
+                                css-doodle {
+                                  --rule: (
+                                    :doodle {
+                                      @grid: 1x1x100 / 100vmin;
+                                      will-change: transform;
+                                      animation: r 23s linear infinite;
+                                    }
+                                  
+                                    @size: 100% 50%;
+                                    position: absolute; top: 25%;
+                                    transform: rotate(@r(360deg));
+                                    perspective: @r(100px, 200px);
+                              
+                                    :after {
+                                      content: '';
+                                      position: absolute;
+                                      @size: @r(.5vmin, 5vmin);
+                                      color: @p(#FDFFFC, #2EC4B6, #E71D36, #FF9F1C);
+                                      background: currentColor;
+                                      box-shadow: @m2(0 0 1.2vmin currentColor);
+                                      will-change: transform;
+                                      animation: cycle @r(2s) linear infinite;
+                                      --trans:
+                                        scaleX(@r(1, 5))
+                                        translateZ(@r(10vmin, 20vmin));
+                                      transform: rotateY(0) @var(--trans);
+                                    }
+                              
+                                    :empty:after {
+                                      color: transparent;
+                                    }
+                              
+                                    @keyframes cycle {
+                                      to {
+                                        transform:
+                                          rotateY(@p(-1turn, 1turn))
+                                          @var(--trans);
+                                      }
+                                    }
+                                    @keyframes r {
+                                      to { transform: rotate(1turn) }
+                                    }
+                                  );
+                                } -->
+                              <!-- </style>
+                              
+                              <css-doodle click-to-update></css-doodle> -->
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- <img src="img/prod/groupchampion_bg.png" alt="團購冠軍"> -->
                 <figure>
                     <figcaption>OOXX派</figcaption>
                     <a href="#"><img src="img/prod/pie_mucha.png"></a>
@@ -144,12 +213,12 @@
                             <h3 class='groupshop_title'>團購冠軍</h3>
                         </div>
                         <!-- ----------slider區塊開始 ------------------->
-                        <div class="slider">
+                        <div class="slider sliderBoard">
                             <a class="slider_prev">
                                 <</a>
                                     <!-------- slider卡片開始 -------------->
-                                    <div class="slider_cardset">
-                                        <div class="card_slider">
+                                    <div class="slider_cardset ul">
+                                        <div class="card_slider li">
                                             <div class="card_titleshow">
                                                 <h3 class='card_title'>2019/07</h3>
                                                 <img src="img/prod/collect.png" alt="">
@@ -161,7 +230,7 @@
                                                 <a href="" class='card_cart'>加入購物車</a>
                                             </div>
                                         </div>
-                                        <div class="card_slider">
+                                        <div class="card_slider li">
                                             <div class="card_titleshow">
                                                 <h3 class='card_title'>2019/07</h3>
                                                 <img src="img/prod/collect.png" alt="">
@@ -173,7 +242,7 @@
                                                 <a href="" class='card_cart'>加入購物車</a>
                                             </div>
                                         </div>
-                                        <div class="card_slider">
+                                        <div class="card_slider li">
                                             <div class="card_titleshow">
                                                 <h3 class='card_title'>2019/07</h3>
                                                 <img src="img/prod/collect.png" alt="">
@@ -185,13 +254,39 @@
                                                 <a href="" class='card_cart'>加入購物車</a>
                                             </div>
                                         </div>
+                                        <div class="card_slider li">
+                                            <div class="card_titleshow">
+                                                <h3 class='card_title'>2019/07</h3>
+                                                <img src="img/prod/collect.png" alt="">
+                                            </div>
+                                            <img src="img/prod/pie.png" class='card_img' alt="派">
+                                            <div class="card_price">價格:200元</div>
+                                            <div class="card_btnGroup">
+                                                <a href="" class='card_group'>我要團購</a>
+                                                <a href="" class='card_cart'>加入購物車</a>
+                                            </div>
+                                        </div>
+                                        <div class="card_slider li">
+                                            <div class="card_titleshow">
+                                                <h3 class='card_title'>2019/07</h3>
+                                                <img src="img/prod/collect.png" alt="">
+                                            </div>
+                                            <img src="img/prod/pie.png" class='card_img' alt="派">
+                                            <div class="card_price">價格:200元</div>
+                                            <div class="card_btnGroup">
+                                                <a href="" class='card_group'>我要團購</a>
+                                                <a href="" class='card_cart'>加入購物車</a>
+                                            </div>
+                                        </div>
+                                        
                                     </div>
                                     <!----------- slider卡片結束 ------------>
                                     <a class="slider_next">&nbsp></a>
                                     <div class="slider_circleset">
-                                        <div class="circle1"></div>
-                                        <div class="circle2"></div>
-                                        <div class="circle3"></div>
+                                        <!-- <div class="circle_clickIt"></div>
+                                        <div class="circle"></div>
+                                        <div class="circle"></div>
+                                        <div class="circle"></div> -->
                                     </div>
                         </div>
                         <!------------ slider區塊結束 ---------------------->
@@ -383,6 +478,10 @@
     </section>
     <footer class="prod_footer">
     </footer>
+    
+    <!-- <script src="slick-1.8.1/slick/slick.min.js"></script> -->
+    <script src="js/slider.js"></script>
+    
 </body>
 
 </html>
